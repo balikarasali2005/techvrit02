@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:ital,wght@0,300;0,500;1,700&display=swap');
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+.container{
+    border: 2px solid black;
+    background-color: darksalmon;
+    overflow: hidden;
+ 
+}
+.container .number{
+    float: left;
+}
+.container .num{
+    float: right;
+}
+.container div{
+    padding: 14px 16px 14px 16px;
+}
+.container a{
+    text-decoration: none;
+    color: blue;
+    padding: 14px 16px;
+
+}
+.container a:hover{
+    background-color: darkslategrey;
+color: deeppink;
+}
+table thead tr th{
+    border:1px solid black;
+    background-color: beige;
+    padding: 15px;
+}
+
+table tbody tr, td{
+    border: 1px solid black;
+    text-align: right;
+    padding: 10px;
+}
+
+.styled-table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.styled-table tbody tr:nth-child(odd){
+    background-color: orchid;
+}
+.styled-table tbody tr:nth-child(even){
+    background-color: paleturquoise;
+}
+.styled-table tbody tr:nth-child(even):hover{
+    background-color: chartreuse;
+}
+.styled-table tbody tr:nth-child(odd):hover{
+    background-color:palevioletred;
+}
+
+.max-contain{
+    position: relative;
+    padding-top: 70px;
+    border: 1px solid green;
+    height: 1000px;
+    width: 1000px;
+    margin: auto;
+}
+.contain{
+    /* position: relative; */
+    margin: auto;
+    border: 1px solid red;
+    height: 700px;
+    width: 700px;
+}
+.cont{
+    display: inline-block;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}
+.contain-3{
+    position: relative;
+    top: 200px;
+    left: 30px;
+} 
+.contain-2{
+    position: absolute;
+     bottom:0;
+     left: 0;
+} 
+.contain-1{
+   position: fixed;
+   bottom: 3px;
+   right: 2px;
+}
+.contain-4{
+    /* width: 100vw; */
+    position: sticky;
+    top: 0;
+}
