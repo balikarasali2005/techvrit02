@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>videos/iframe/tables/forms/lists/css</title>
+    <link rel="stylesheet" href="./styles/index.css"/>
+</head>
+<body>
+    <!-- <iframe src="../day1/index.html"></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2KuabuIBc9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+    <!-- html table -->
+    <table>
+        <caption>
+            Employee Information
+        </caption>
+        <thead>
+            <tr>
+                <th>Employee Id</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+            </tr>
+            <tbody>
+                <tr>
+                <td>001</td>
+                <td>John Doe</td>
+                <td>Manager</td>
+                <td>$75000</td>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>John Doe</td>
+                    <td>Manager</td>
+                    <td>$75000</td>
+                    </tr>
+                    <tr>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td>Manager</td>
+                        <td>$75000</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>John Doe</td>
+                            <td>Manager</td>
+                            <td>$75000</td>
+                            </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="3">Total Salary</td>
+                <td>$300000</td>
+            </tfoot>
+        </thead>
+    </table>
+
+    <!-- lists->2->orederlist,unorderlist -->
+<!-- 1.unordered list -->
+<ul>
+    <li>student1</li>
+    <li>student2</li>
+    <li>student3</li>
+</ul>
+
+<!-- 2.ordered list -->
+<ol type="A">
+    <li>student1</li>
+    <li>student2</li>
+    <li>student3</li>
+</ol>
+
+<!-- html forms -->
+<form action="" method="post">
+<!-- text input -->
+<label for="name">Name</label>
+<input type="text" value="" placeholder="enter your name " required/>
+<br />
+<!-- email input -->
+<label for="email">Email</label>
+<input autofocus type="email" id="email" placeholder="enter your email " required/>
+<br />
+<!-- password input -->
+<label for="password">Password</label>
+<input type="password" id="password" placeholder="enter your password " required/><br />
+<!-- radio buttons -->
+<label>male</label>
+<input
+type="radio"
+id="male"
+name="gender"
+value="male"
+/>
+<label for="female">female</label>
+<input
+type="radio"
+id="female"
+name="gender"
+value="female"
+/>
+<label for="female">other</label>
+<input
+type="radio"
+id="other"
+name="gender"
+value="other"
+/>
+
+<br />
+<!-- checkbox -->
+<label for="">
+    <input type="checkbox" name="terms-and-conditons"/> i accept to terms and condition</label>
+<br><br><br>
+<!-- dropdown -->
+<select name="" id="">
+<option value="">select a value to continue</option>
+<option value="a">A</option>
+<option value="b">B</option>
+<option value="c">C</option>
+</select>
+<br><br>
+<!-- description or textareas -->
+    <label for="description">Description</label>
+    <textarea name="description" id="description" cols="30" rows="3"></textarea>
+<br /><br>
+    <!-- file input -->
+    <label for="avatar">Avatar:</label>
+    <input type="file" id="avatar">
+<br/><br>
+    <!-- label grouping with fieldset and legend -->
+    <fieldset>
+        <legend>contact Information</legend>
+        <label for="avatar">Avatar:</label>
+        <input type="file" id="avatar">
+    </fieldset>
+<br> <br>
+    <!-- date of birth -->
+    <label for="date">Date of birth</label>
+<input 
+type="date"
+id="date"
+/>
+<br><br>
+   <!-- range input -->
+   <label for="volume">Volume</label>
+   <input 
+   type="range"
+   id="volume"
+   min="0"
+   max="100"
+   />
+   <br><br>
+
+      <!-- colorchoose or colorpicker input -->
+      <label for="favcolor">Favcolor</label>
+      <input 
+      type="color"
+      id="favcolor"
+      
+      />
+      <br><br>
+      <button type="submit">submit</button>
+      <button type="button">login</button>
+      <button type="reset">reset</button>
+</form>
+
+<a href="https://www.google.com" target="_blank">google</a>
+<!-- <input type="button" value="login"/> -->
+
+</body>
+</html>
