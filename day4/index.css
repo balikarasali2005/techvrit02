@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:ital,wght@0,300;0,500;1,700&display=swap');
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    background-image: url(./image1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.para{
+    border: 1px red solid;
+}
+.border{
+    border-style: solid;
+    border-color:black;
+    border-width: 1px;
+    /* border-radius: 50px; */
+    height: 150px;
+    width: 400px;
+   overflow-y: scroll;
+   overflow-x: scroll;
+
+    /* border: 1px solid red; */
+}
+.border p{
+    width: 400px;
+}
+.border .paragraph{
+    font-size: 12px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.border .paragraph span{
+    font-size: cursive;
+    text-decoration: underline;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+/* h1{
+    color: aqua;
+} */
+h1{
+    color: blue  ;
+}
