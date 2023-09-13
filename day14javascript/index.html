@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>javascript</title>
+</head>
+<body>
+<script>
+    // comparison operator
+    let a =30;
+    let b = "30";
+//  equal value
+console.log("a==b", a == b);
+
+//not  equal value 
+console.log("a!=b", a != b);
+
+// equal type and equal value
+console.log("a === b", a===b);
+
+// not equal type and equal value
+console.log("a !== b", a!==b);
+
+
+let x=10;
+let y=30;
+console.log("x>y", x > y);
+console.log("x<y", x < y);
+  
+//   concat string
+let text1 = "Aquick brown fox";
+let text2 = "jumps over lazy dog";
+let text3 = ".";
+let number = 30;
+let text4 = 50;
+
+const thirdString =text1 + " " + text2 + text3;
+console.log(thirdString);
+
+
+// converting string to number
+ const string1 ='ABC';
+ const string2="55";
+ const changeString1Num =Number(string1);
+ const changeString2Num =Number(string2);
+
+ console.log(string1, changeString1Num);
+ console.log(
+    string2,
+    typeof string2,
+    "ok thik xa",
+    changeString2Num,
+    typeof changeString2Num
+ );
+
+
+//  logical operator
+
+// logical Not 
+ let email=null;
+ let password;
+ if(!email){
+ console.log("Enter Email to contribute");
+}
+console.log("!email",!email);
+console.log("!password",!password);
+
+// Logical AND
+let student3 = 21;
+let student4 = 17;
+
+console.log("you can enter a club", student3 >=18  && student4>= 18);
+
+// logical or
+console.log("you can enter a club", student3 >=18 || student4>= 18);
+
+// Object ->Array
+let obj1 ={
+  " first Name" : "mrcedez",
+   "last  Name" : "Benz",
+    madeYear : 2012,
+    madeIn : "USA",
+    kilometersRun:90000,
+    color:" white",
+    isSold : false,
+    address :{
+        city :"washington",
+        postalCode :[ "1",2,{
+            tes:"abc",
+        }
+    ],
+        owerDetails:{
+            owername:"bali",
+            phoneNumber:999,      
+          },
+    },
+};
+let obj2 ={
+  " first Name" : "mrcedez",
+   "last  Name" : "Benz",
+    madeYear : 2012,
+    madeIn : "USA",
+    kilometersRun:90000,
+    color:" white",
+    isSold : false,
+    address :{
+        city :"washington",
+        postalCode :[ "1",2,{
+            tes:"abc",
+        }
+    ],
+        owerDetails:{
+            owername:"bali",
+            phoneNumber:999,      
+          },
+    },
+};
+console.log(obj1.address.owerDetails.owername);
+console.log(obj1["address"]["owerDetails"]["phoneNumber"]);
+console.log(obj1 ["madeYear"] > 2015);
+console.log(obj1["first name"]);
+console.log(obj1["last name"]);
+
+//  Array ->Object
+const arr = [1,2,3,4,5];
+console.log(arr.length);
+// fixed array first index =0
+console.log(arr[0]);
+console.log(arr[1]);
+console.log(arr[2]);
+console.log(arr[3]);
+// fixed array lastindex -> array.length -1
+console.log(arr[arr.length-1]);
+</script>
+</body>
+</html>
