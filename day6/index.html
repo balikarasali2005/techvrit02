@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .container{
+border:1px solid red;
+height: 500px;
+width: 500px;
+display: flex;
+margin:  auto;
+flex-direction: row;
+justify-content: space-between;
+        }
+        .item{
+            border: 1px solid black;
+            height: 80px;
+            width: 80px;
+
+        }
+       /* .items6{
+        display: flex;
+       }
+       .items7{
+        display: flex;
+       } */
+
+       /* for child */
+       .items1{
+        order: 5;
+       }
+       .items2{
+        order: 2;
+       }
+       .item3{
+        order: 3;
+       }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <!-- <div class="items7"> -->
+            <div class="items1 item">page1</div>
+        <div class="items2 item">page2</div>
+        <!-- </div> -->
+        <div class="items3 item">page3</div>
+       <!-- <div class="items6"> -->
+        <div class="items4 item">page4</div>
+        <div class="items5 item">page5</div>
+       <!-- </div> -->
+       </div>
+     </div>
+</body>
+</html>
