@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous/aynchronous programming</title>
+</head>
+<body>
+    <script>
+        const array = [
+        {
+          id: 1,
+          productName: "Phone",
+          description: "loremloremlorem",
+          price: 1000,
+          currency: "USD",
+          address: {
+            city: "Washington",
+            postalCode: 2000,
+          },
+          discountPercent: 20,
+          rating: 3,
+        },
+        {
+          id: 2,
+          productName: "Phone2",
+          description: "loremloremlorem",
+          price: 10000,
+          currency: "MXN",
+          address: {
+            city: "Mexico",
+            postalCode: 3000,
+          },
+          discountPercent: 30,
+          rating: 4,
+        },
+        {
+          id: 3,
+          productName: "Phone3",
+          description: "loremloremlorem",
+          price: 15000,
+          currency: "NPR",
+          address: {
+            city: "Kathmandu",
+            postalCode: 44600,
+          },
+          discountPercent: 70,
+          rating: 1,
+        },
+        {
+          id: 4,
+          productName: "Phone4",
+          description: "loremloremlorem",
+          price: 1000,
+          currency: "MXN",
+          address: {
+            city: "Mexico",
+            postalCode: 1000,
+          },
+          discountPercent: 20,
+          rating: 2,
+        },
+        {
+          id: 5,
+          productName: "Phone5",
+          description: "loremloremlorem",
+          price: 50000,
+          currency: "NPR",
+          address: {
+            city: "Pokhara",
+            postalCode: 10000,
+          },
+          discountPercent: 245,
+          rating: 4,
+        },
+        {
+          id: 6,
+          productName: "Phone6",
+          description: "loremloremlorem",
+          price: 1000,
+          currency: "USD",
+          address: {
+            city: "Washington",
+            postalCode: 1000,
+          },
+          discountPercent: 65,
+          rating: 4.6,
+        },
+      ];
+
+
+        const data =array.filter((val,i)=>{
+            return i % 2===0;
+        })
+        console.log(data);
+        // delete=>backend api call =>database delete->filter method..
+        console.log(array);
+
+        const deleteProduct =(id)=>{
+console.log(id)
+const filteredProducts = array.filter((item)=>{
+return item.id!==id
+})
+
+console.log('filteredProduct',filteredProducts)
+        }
+        deleteProduct(2);
+
+
+
+        // example of async
+        console.log('1')
+        setTimeout(()=>{
+            console.log('2')
+        },500)
+console.log('3')
+console.log('4')
+
+
+console.log('1')
+       for(let i=0;i>1000;i++){
+        console.log('ok')
+       }
+console.log('3')
+console.log('4')
+        // sync/async programming
+
+const additoon = (a,b)=>{
+    console.log(a+b);
+}
+const logger =(value)=>{
+console.log('added value is following:',value);
+}
+additoon(1,2);
+// callbackhell
+
+// promises
+let error = false
+const returnProducts = () =>{
+    return new Promise((resolve,reject)=>
+    {
+        if(!error){
+            resolve(array)
+        }else{
+            reject('failed to fetch data from backend')
+        }
+    })
+}
+
+
+returnProducts().then((value)=>{
+    console.log(value)
+}).catch((err)=>{
+    console.log('error coming here',err)
+})
+    </script>
+</body>
+</html>
