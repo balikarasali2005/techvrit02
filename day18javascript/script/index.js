@@ -12,14 +12,13 @@ document.write(`copyright @company_name ${currDate}`);
 const dateFormatter = (date)=>{
 
     const currYear = date.getFullYear();
-    const currMonth = date.getMonth();
+    const currMonth = date.getMonth();  
     const currDate = date.getDate();
     const formatterDate =`${currYear}-${currMonth + 1}-${currDate}`
     return formatterDate;
 }
 const f=dateFormatter(currDate);
-console.log(`${f}`);
-
+console.log(`${f}`);    
 // ECMAscript-ES=>how to right code like snytax,standard
 // var ,let ,const
 // var(function scope) let(block scope) vs const(block scope)
