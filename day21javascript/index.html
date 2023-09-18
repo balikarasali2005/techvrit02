@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 id="hello-world">Hello World</h1>
+<h5 id="ok"></h5>
+<form action="">
+  <input id="number" type="text" />
+</form>
+<body>
+    <script>
+        // find()
+        const arr = [
+            {
+                name:'ram', 
+            }
+            ]
+        const data = arr.find((val)=>{
+            // console.log(val);
+            return val.name==="ram";
+        });
+        console.log(data);
+      
+        // new set
+// const data2 = new
+
+// spread operator
+const variable ={
+    name:"arr",
+    age:"30",
+    isActive:true,
+    isActive:true,
+    isActive:true,
+};
+const variable1 ={
+    name1:"arr",
+    age1:"30",
+    isActive1:true,
+    isActive1:true,
+    isActive1:true,
+};
+let variable3 = {
+   ...variable,
+   ...variable1, 
+};
+
+const sum=[1,2,3,4,5];
+console.log(...sum);
+
+
+const dupArr=[{
+    // id:1,
+    name:"ram",
+},
+{
+    // id:1,
+    name:"sita",
+},
+{
+    // id:1,
+    name:"shyam",
+},
+{
+    // id:1,
+    name:"hari",
+},
+];
+const newArr = dupArr.map((val)=>{
+    return val.name;
+});
+const uniqueDatas = [...new Set(newArr)];
+const newDatas = uniqueDatas.map((val)=>{
+    return dupArr.find((item)=>{
+        return item.name ===val;
+    })
+})
+const arrr = [
+        {
+          name: "Ram",
+        },
+        {
+          name: "Ram",
+        },
+        {
+          name: "Sita",
+        },
+        {
+          name: "Hari",
+        },
+      ];
+      const distinct = [];
+for(let i=0;i<arr.length;i++){
+ console.log(distinct)
+  distinct.push(arrr[i].name)
+}
+
+
+
+fetch("https:dummyjson.com/users").then((res)=>res.json())
+.then((val)=>console.log(vla))
+
+// DOM
+document.title="hey whats up";
+
+const inputTag = document.getElementById("number");
+
+  inputTag.value = 10 + "is Not a prime number";
+    </script>
+</body>
+</html
