@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <script>
+// jump on clouds
+const clouds = [0,0,1,0,0,1,0];
+function jumpingOnClouds(c){
+let countToJump=0;
+for(let i=0;i<c.length-1;){
+    if(i+2<c.length &&c[i+2]===0){
+        i += 2;
+    }else{
+        i++;
+    }
+    countToJump++;
+}
+return countToJump;
+}
+console.log(jumpingOnClouds(clouds));
+
+// data filtering and aggregation
+const data = [ 
+ { product: 'Widget', sales: 100, region: 'North' },
+ { product: 'Gadget', sales: 200, region: 'South' }, 
+ { product: 'Widget', sales: 150, region: 'North' }, 
+ { product: 'Gadget', sales: 120, region: 'South' }, 
+];
+
+let sum = 0
+data.filter((item) => {
+    return item.region === "North";
+})
+.forEach((value)=>{
+    sum +=value.sales
+});
+console.log(`${sum} is in north region`);
+
+//  character count
+const characterCount="the quick over brown dog jumps over a lazy dog";
+// for(let char=0;char<characterCount.length;char++){
+//     console.log(characterCount[char]);
+// }
+let characterFrequency={};
+for(let char of characterCount){
+    if(characterFrequency[char]){
+        characterFrequency[char]++;
+    }else{
+        characterFrequency[char]=1;
+    }
+}
+console.log(characterFrequency);
+
+// word count
+const wordCount ="abc abc abc";
+ words = wordCount.split(" ");
+ console.log(words)
+
+//  word count2
+const wordCount1 = "abc abc the okay the";
+const characterCount1 = wordCount1.split(" ");
+console.log(characterCount1);
+for (let char of characterCount) {
+  if (characterFrequency[char]) {
+    characterFrequency[char]++;
+    console.log(characterFrequency);
+  } else {
+    characterFrequency[char] = 1;
+    console.log(characterFrequency);
+  }
+}
+
+//  Word Frequency Counter
+const text = "This is a simple example. This is just an example of word frequency.";
+const character = text.split(/\w+/);
+let characterFrequency1={};
+for (let char of text) {
+    if(char !==""){
+  if (characterFrequency1[char]) {
+    characterFrequency1[char]++;
+  } else {
+    characterFrequency1[char] = 1;
+  }
+} 
+}
+</script>
+</body>
+</html>
