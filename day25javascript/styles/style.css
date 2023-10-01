@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url(/day25javascript/assets/image1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width:460px;
+    height: 615px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    box-shadow: 2px 2px 2px 6px white;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ h2{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: .9rem;
+}
+.bxs-user-circle{
+    font-size: 7rem;
+    color: white;
+  margin-left: 6.8rem;
+  margin-top: 2rem;
+
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 322px;
+    border-bottom: 2px solid #fff;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: -5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding:0 35px 0 5px;
+    color: #fff;
+}
+.inputbox i{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.5rem;
+    top: 20px;
+}
+.forgot{
+    margin: -10px 0 15px;
+    font-size: 1rem;
+    margin-top: .4rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.forgot label input{
+    margin-right:5px;
+    font-size: .9rem;
+}
+
+.forgot label a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 17px;
+    font-size: 1.1rem;
+    text-decoration:2px solid underline;
+    color: rgb(71, 71, 252);
+    font-weight: 600;
+}
+
+button
+{
+    width: 40%;
+    height: 3rem;
+    border: 2px solid #fff;
+    border-radius: 14px;
+    background: transparent;
+    color: white;
+    outline: none;
+    cursor: pointer;
+   margin-left: 5.5rem;
+   margin-top: 1.4rem;
+   margin-bottom: .9rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+button:hover{
+    background: white;
+    color: black;
+    border: 2px solid black;
+}
+.register{
+    font-size: .9rem;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p{
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+.register p a{
+    text-decoration: none;
+    color: rgb(71, 71, 252);
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+     text-decoration:2px solid underline;
+}
