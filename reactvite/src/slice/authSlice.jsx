@@ -7,6 +7,12 @@ const initialState={
 const authSlice=createSlice({
     name:"Auth",
     initialState,
-    reducers:{}
-})
+    reducers:{
+        login : (state, data)=>{
+            state.isLoggedIn=true;
+            state.jwt=data.payload;
+        },
+    },
+});
+export const { login } = authSlice.actions;
 export default authSlice.reducer;

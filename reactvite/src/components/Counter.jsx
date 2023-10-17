@@ -1,15 +1,13 @@
-import React from 'react'
-from "react";
-import React {useState,useEffect  } from "react-router-dom ";
-import {Button,Card,CardBody,CardFooter,CardHeader} from "react-bootstrap";
-
-import {useSelector,useDispatch} from 'react-redux'
-import {increment,decrement,reset} from '../slice/counterSlice';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import {Button,Card,CardBody,CardFooter, CardHeader,} from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment,  incrementByValue,  reset,} from "../slice/counterSlice";
 
 const Counter = () => {
     const dispatch = useDispatch();
     const count = useSelector((state)=>{
-        return this.state.counterReducer.count;
+    return state.counterReducer.count;
     })
   return (
     <Card className="mt-5">
