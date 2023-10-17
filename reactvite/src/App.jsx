@@ -3,7 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Routes, Route } from "react-router-dom";
-import Counter from "./components/Counter1";
+import Counter1 from "./components/Counter1";
+import Counter from './components/Counter';
 import QuoteDisplay from './components/QuoteDisplay';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
@@ -12,7 +13,6 @@ import { ToastContainer } from 'react-toastify';
 import Products from './Pages/Products';
 import AddProductForm from './components/AddProductForm';
 import { SecureRoute } from './routes/SecureRoute';
-import Counter1 from './components/Counter1';
 function App() {
   return (
     <>

@@ -7,7 +7,6 @@ import { Button,Form, FloatingLabel } from 'react-bootstrap';
 import AddProduct from '../components/AddProduct';
 import { useNavigate } from 'react-router-dom';
 import EditProduct from '../components/EditProduct';
-import '../styles/style.css'
 const Products = () => {
     const[products,setProducts]=useState([]);
     const[originalProduct,setOriginalProduct]=useState([])
@@ -32,6 +31,8 @@ try{
     setIsLoading(true);
     const {data} = await axios.get(URL+'product');
     // const users = await axios.get(URL + 'users')
+localStorage.setItem("products",JSON.stringify(data.products));
+
     setProducts(data.products);
     setOriginalProduct(data.products);
 

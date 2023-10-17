@@ -6,6 +6,8 @@ import { toast } from 'react-toastify';
 import { AiOutlineUser } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 import { errorToast, successToast } from "../services/toast.sevices";
+import { useDispatch } from "react-redux";
+import { login } from "../slice/authSlice";
 const Login = () => {
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
@@ -19,6 +21,7 @@ if(e.target.name ==='email'){
 setPassword(e.target.value);
 }
 }
+const dispatch = useDispatch();
   function handleSubmit(e){
     e.preventDefault();
 const data={
@@ -35,6 +38,7 @@ console.log(resp)
 
 if(resp.data.status){
 // navigate->for next pages
+dispatch(login(resp.data.data.jwt));
 localStorage.setItem("isLoggedIn",true)
 navigate("/product");
 successToast(resp.data.message);
