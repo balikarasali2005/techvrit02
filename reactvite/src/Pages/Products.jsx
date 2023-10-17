@@ -7,7 +7,7 @@ import { Button,Form, FloatingLabel } from 'react-bootstrap';
 import AddProduct from '../components/AddProduct';
 import { useNavigate } from 'react-router-dom';
 import EditProduct from '../components/EditProduct';
-
+import '../styles/style.css'
 const Products = () => {
     const[products,setProducts]=useState([]);
     const[originalProduct,setOriginalProduct]=useState([])
@@ -22,9 +22,10 @@ const [product,setProduct]=useState({
     const [show,setShow]=useState(false);
     const [ShowEdit,setshowEdit]=useState(false);
     const[editedProduct,setEditedProduct]=useState({})
-    // const navigate= useNavigate()
+    // for navigate
+    const navigate= useNavigate()
 
-    const URL=import.meta.env.VITE_BACKEND_URL;
+    const URL = import.meta.env.VITE_BACKEND_URL;
 
     const getData = async()=>{   
 try{
@@ -46,7 +47,7 @@ errorToast(error.response.data)
 setIsLoading(false);
 }}
 useEffect(()=>{
-getData();
+  getData();
     },[])
     const deleteHandler = (e, id) => {
         e.preventDefault();
@@ -78,6 +79,9 @@ setProduct((prev)=>{
      setShow(false);
   }
 
+// viewDetails Product
+
+
   // edit handle
 function handleCloseEdit(){
   setshowEdit(false)
@@ -85,7 +89,6 @@ function handleCloseEdit(){
 const editHandler = (e,id)=>{
 e.preventDefault()
 const prod = products.find((product)=>product.id===id);
-// console.log(prod)
 setEditedProduct(prod);
 setshowEdit(true);
   }
@@ -124,7 +127,6 @@ setProducts(filteredProd);
     setProducts(originalProduct)
   }
 }  
-
  return ( 
 <>
 {loading ? (
@@ -144,7 +146,13 @@ setProducts(filteredProd);
     })
    }
     </Form.Select>
-
+{/* logout button */}
+<div className="buttonContainer text-center mt-2"> 
+      <Button onClick={()=>{
+sessionStorage.removeItem('isLoggedIn');
+navigate('/');
+      }}>Logout</Button>
+      </div>
 {/* for search product */}
 <FloatingLabel
           controlId="floatingInput"
@@ -181,6 +189,7 @@ setProducts(filteredProd);
    handleEditChange={ handleEditChange}
    editProduct={editProduct}
     />
+
   </>
 )}
 </>
