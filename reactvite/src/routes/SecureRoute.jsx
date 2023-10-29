@@ -1,8 +1,9 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export const SecureRoute = () => {
-    const isLoggedIn =localStorage.getItem("isLoggedIn")
+    const isLoggedIn =useSelector((state) => state.authReducer.isLoggedIn)
     const loggedin=Boolean(isLoggedIn);
     console.log(loggedin,typeof loggedin);
   return (
