@@ -11,6 +11,7 @@ const Products = () => {
     const[products,setProducts]=useState([]);
     const[originalProduct,setOriginalProduct]=useState([])
     const[categories,setCategories]=useState([])
+    
 const [product,setProduct]=useState({
   title:"",
   thumbnail:"",
@@ -25,7 +26,7 @@ const [product,setProduct]=useState({
     const navigate= useNavigate()
 
     const URL = import.meta.env.VITE_BACKEND_URL;
-
+ 
     const getData = async()=>{   
 try{
     setIsLoading(true);
